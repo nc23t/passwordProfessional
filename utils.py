@@ -23,21 +23,34 @@ def length(user_password):
     elif len(user_password) > 20:
         print('Your password is', len(user_password), "characters, this is too long!")
         #gets 7 pts
+      
+      
         
 def upper(user_password):
     upperCounter = 0
     for char in user_password:
         if char.isupper():
             upperCounter += 1
-            if (upperCounter <= 1):
-                print("You need more uppercase letters!")
-                # gets 1 pt
-            elif(upperCounter <= 2):
-                print("You still need more uppercase letters")
-            elif(upperCounter >= 3):
-                print("Perfect amount of uppercase letters!")         
-    print("The total number of uppercase in your password is:", upperCounter)
-        
+    if (upperCounter < 1):
+        print("The total number of uppercase in your password is:",upperCounter)
+        print("Add at least 1 uppercase character.")
+    elif(upperCounter >= 1):
+        print("The total number of uppercase in your password is:",upperCounter)
+        print('Good amount of uppercase characters.')                       
+    
+    
+def number(user_password):
+    numberCounter = 0
+    for num in user_password:
+        if num.isnumeric():
+            numberCounter += 1
+    if(numberCounter >= 1):
+        print('You have', numberCounter,"numbers in your password.")
+        print('Valid amount of numbers') 
+    elif(numberCounter < 1):
+        print('You have', numberCounter,"numbers in your password.")
+        print("Add at least one number to your password")         
+
     
 
 

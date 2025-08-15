@@ -7,14 +7,16 @@
 
 import re
 import string
-from utils import length, upper
+from utils import length, upper, number
 
 print('Welcome to passwordProfessional, lets see how strong your password is!')
-print('Rule of thumb: 20 chararacters long, mix of upper and lowercase characters \nadd some numbers aswell')
+print('Rule of thumb: 20 chararacters long, at least 1 upper case character and 1 number')
+
 
 user_password = input('Input your password:')
 length(user_password)
 upper(user_password)
+number(user_password)
 
 
 
