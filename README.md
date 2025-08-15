@@ -1,4 +1,4 @@
- # passwordProfessional
+  passwordProfessional
 
 A simple, learning-focused CLI tool that **assesses password strength** and gives actionable feedback. This project is being built step-by-step to practice Python fundamentals (functions, modules, I/O, and simple scoring logic).
 
