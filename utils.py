@@ -49,7 +49,24 @@ def number(user_password):
         print('Valid amount of numbers') 
     elif(numberCounter < 1):
         print('You have', numberCounter,"numbers in your password.")
-        print("Add at least one number to your password")         
+        print("Add at least one number to your password")   
+        
+        
+def special(user_password):
+    pattern = r'[^a-zA-Z0-9\s]'
+    specialCharacters = re.findall(pattern, user_password)
+    count = len(specialCharacters)
+    if(count >= 3):
+        print(count,"speical characters contained in your password")
+        print('Valid amount of special characters.')
+    elif(count < 3):
+        print(count,"speical characters contained in your password")
+        print("Add more special charcaters to your password.")
+        
+      
+        
+        
+        
 
     
 
