@@ -1,23 +1,33 @@
-# strong password is 20 characters long, 
-# with at least 1 uppercase letter, 1 number, 
-# and 3 special characters
-# gives points for length# gives points for character variety (lower/upper/digit/symbol)
-# clamps to 0 - 100
+# strong password is 20 characters long, DONE
+# with at least 1 uppercase letter, 1 number, DONE
+# and 3 special characters DONE
+# gives points for length# gives points for character variety (lower/upper/digit/symbol) DONE
 # maps to labels: weak / ok / strong
 
 import re
 import string
-from utils import length, upper, number, special
+from utils import length, upper, number, special, scoring
+
 
 print('Welcome to passwordProfessional, lets see how strong your password is!')
-print('Rule of thumb: 20 chararacters long, at least 1 upper case character and 1 number')
 
 
 user_password = input('Input your password:')
-length(user_password)
-upper(user_password)
-number(user_password)
-special(user_password)
+score_length = length(user_password)
+score_upperCase = upper(user_password)
+score_number = number(user_password)
+score_special = special(user_password)
+
+#NEED to tweak the scoring system, 'FU' as a password gets an 'OK' score which is should definitely not get.
+
+
+total = score_length + score_upperCase + score_number + score_special
+print("Your total score is " + str(total) + '/40')
+
+scoring(total)
+
+
+
 
 
 
