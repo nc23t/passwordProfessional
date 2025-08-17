@@ -45,13 +45,13 @@ def upper(user_password):
     if (upperCounter < 1):
         print("The total number of uppercase in your password is:",upperCounter)
         print("Add at least 1 uppercase character.")
-        ptsU = 5
+        ptsU = 0
         print('Your score for uppercase is', ptsU,'points') 
         return ptsU                
     elif(upperCounter >= 1):
         print("The total number of uppercase in your password is:",upperCounter)
         print('Good amount of uppercase characters.')   
-        ptsU = 10   
+        ptsU = 8   
         print('Your score for uppercase is', ptsU,'points')
         return ptsU                  
     
@@ -64,13 +64,13 @@ def number(user_password):
     if(numberCounter >= 1):
         print('You have', numberCounter,"numbers in your password.")
         print('Valid amount of numbers') 
-        ptsN = 10
+        ptsN = 8
         print('Your score for numbers is', ptsN,'points')
         return ptsN 
     elif(numberCounter < 1):
         print('You have', numberCounter,"numbers in your password.")
         print("Add at least one number to your password")  
-        ptsN = 5
+        ptsN = 0
         print('Your score for numbers is', ptsN,'points')
         return ptsN
         
@@ -88,7 +88,7 @@ def special(user_password):
     elif(count < 3):
         print(count,"speical characters contained in your password")
         print("Add more special charcaters to your password.")
-        ptsS = 5
+        ptsS = 0
         print('Your score for special characters is', ptsS, 'points')
         return ptsS
     
@@ -96,10 +96,10 @@ def special(user_password):
 def scoring(total):
     if (total >= 30):
         print('You have a strong password!')
-    elif(total < 30):
-        print('Your password is OK')
     elif(total <= 20):
-        print('Your password is weak')
+        print('Your password is WEAK')
+    elif(20 < total <30):
+        print('Your password is OK')
 
       
 

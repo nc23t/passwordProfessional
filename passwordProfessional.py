@@ -22,7 +22,7 @@ score_special = special(user_password)
 
 
 total = score_length + score_upperCase + score_number + score_special
-print("Your total score is " + str(total) + '/40')
+print("Your total score is " + str(total) + '/36')
 
 scoring(total)
 
