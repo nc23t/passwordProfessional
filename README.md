@@ -10,7 +10,7 @@ A simple, learning-focused CLI tool that **assesses password strength** and give
   - Length quality
   - Presence of uppercase letters
   - Presence of numbers
-- Scoring model: *0–36* with labels (`weak` / `ok` / `strong`).
+- Scoring model: *0–40* with labels (`weak` / `ok` / `strong`).
 - Target “strong” profile (goal): *20 characters*, at least *1 uppercase*, *1 number*, and *3 special characters*.
 
 ---
