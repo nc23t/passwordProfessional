@@ -18,9 +18,6 @@ score_upperCase = upper(user_password)
 score_number = number(user_password)
 score_special = special(user_password)
 
-# NEED to tweak the scoring system, 'FU' as a password gets an 'OK' score which is should definitely not get.
-
-
 total = score_length + score_upperCase + score_number + score_special
 print("Your total score is " + str(total) + '/40')
 
